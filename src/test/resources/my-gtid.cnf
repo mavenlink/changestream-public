@@ -1,0 +1,9 @@
+[mysqld]
+log-bin=mysql-bin
+gtid_mode=on
+log-slave-updates
+enforce-gtid-consistency
+binlog_format=row
+binlog_rows_query_log_events # Optional: if you want to obtain the original query associated with the mutation events
+server-id=952 # must be different than the same setting in application.conf
+expire_logs_days=1
